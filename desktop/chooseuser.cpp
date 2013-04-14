@@ -1,3 +1,4 @@
+//copyright (c) 2013 Evgenii Lezhnin
 #include "chooseuser.h"
 #include "ui_chooseuser.h"
 #include "newuser.h"

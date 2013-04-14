@@ -129,6 +129,7 @@ public:
 
         lineEdit_2 = new QLineEdit(ChooseUser);
         lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+        lineEdit_2->setEchoMode(QLineEdit::Password);
 
         horizontalLayout_2->addWidget(lineEdit_2);
 
@@ -161,7 +162,7 @@ public:
 
     void retranslateUi(QDialog *ChooseUser)
     {
-        ChooseUser->setWindowTitle(QApplication::translate("ChooseUser", "Dialog", 0, QApplication::UnicodeUTF8));
+        ChooseUser->setWindowTitle(QApplication::translate("ChooseUser", "Please enter your name and password", 0, QApplication::UnicodeUTF8));
         label->setText(QApplication::translate("ChooseUser", "User", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("ChooseUser", "Password", 0, QApplication::UnicodeUTF8));
         pushButton->setText(QApplication::translate("ChooseUser", "New &User", 0, QApplication::UnicodeUTF8));

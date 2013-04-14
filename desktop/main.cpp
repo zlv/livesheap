@@ -1,3 +1,7 @@
+/*
+Клиент социальной игры десктопная версия
+copyright (c) 2013 Евгений Лежнин
+  */
 #include <QtGui/QApplication>
 #include <QTranslator>
 #include "chooseuser.h"
@@ -12,7 +16,7 @@ int main(int argc, char *argv[])
     app.setApplicationName( "livesheap" );
 
     //поддержка не-ascii символов
-    //QTextCodec::setCodecForCStrings(QTextCodec::codecForName("utf-16"));
+    QTextCodec::setCodecForCStrings(QTextCodec::codecForName("utf-8"));
 
     //выбор языка / language selection
     QTranslator translator;

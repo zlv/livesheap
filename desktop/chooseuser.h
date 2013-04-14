@@ -1,3 +1,7 @@
+/*
+Один из диалогов
+copyright (c) 2013 Евгений Лежнин
+  */
 #ifndef CHOOSEUSER_H
 #define CHOOSEUSER_H
 
@@ -20,7 +24,7 @@ private:
     Ui::ChooseUser *ui;
 
 public slots:
-    void newUser();
+    void newUser(); //вызвать ещё один диалог / call another one
 };
 }
 

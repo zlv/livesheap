@@ -1,7 +1,12 @@
+/*
+Другой из диалогов / just that another one
+copyright (c) 2013 Евгений Лежнин
+  */
 #ifndef NEWUSER_H
 #define NEWUSER_H
 
 #include <QDialog>
+#include <QUrl>
 
 namespace Ui {
 class NewUser;
@@ -21,10 +26,13 @@ public:
 private:
     Ui::NewUser *ui;
     QNetworkAccessManager *pManager;
+    QUrl serverUrl; //сохраняется в самом начале
 
+private:
+    QString reaction(const QString&); //реакция на сообщение от сервера / ... on server message
 public slots:
     void ok();
-    void reply(QNetworkReply*);
+    void reply(QNetworkReply*); //сообщение от сервера / ... from server
 };
 }
 
