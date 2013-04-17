@@ -4,7 +4,7 @@ copyright (c) 2013 Евгений Лежнин
   */
 #include <QtGui/QApplication>
 #include <QTranslator>
-#include "chooseuser.h"
+#include "lobby.h"
 #include <QLocale>
 #include <QTextCodec>
 using namespace livesheap;
@@ -24,7 +24,7 @@ int main(int argc, char *argv[])
     translator.load("ru");
     app.installTranslator(&translator);
 
-    ChooseUser *user = new ChooseUser();
-    user->show();
+    Lobby lobby;
+    lobby.show();
     return app.exec();
 }

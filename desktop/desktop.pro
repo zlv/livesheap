@@ -8,16 +8,24 @@ DEPENDPATH += .
 INCLUDEPATH += .
 QT += network
 CONFIG   -= app_bundle
+CONFIG += no_warn
+CONFIG -= warn_on
+
 
 # Input
 SOURCES += main.cpp \
     newuser.cpp \
-    chooseuser.cpp
+    chooseuser.cpp \
+    lobby.cpp \
+    managerthread.cpp
 
 HEADERS += \
     newuser.h \
-    chooseuser.h
+    chooseuser.h \
+    lobby.h \
+    managerthread.h
 
 FORMS += \
     newuser.ui \
-    chooseuser.ui
+    chooseuser.ui \
+    lobby.ui

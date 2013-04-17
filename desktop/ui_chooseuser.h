@@ -14,7 +14,6 @@
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
 #include <QtGui/QDialog>
-#include <QtGui/QDialogButtonBox>
 #include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
@@ -35,7 +34,9 @@ public:
     QLabel *label_2;
     QLineEdit *lineEdit_2;
     QPushButton *pushButton;
-    QDialogButtonBox *buttonBox;
+    QHBoxLayout *horizontalLayout_3;
+    QPushButton *pushButton_2;
+    QPushButton *pushButton_3;
 
     void setupUi(QDialog *ChooseUser)
     {
@@ -104,7 +105,6 @@ public:
         ChooseUser->setFont(font);
         verticalLayout = new QVBoxLayout(ChooseUser);
         verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
-        verticalLayout->setContentsMargins(20, 20, 20, -1);
         horizontalLayout = new QHBoxLayout();
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         label = new QLabel(ChooseUser);
@@ -145,17 +145,27 @@ public:
 
         verticalLayout->addWidget(pushButton);
 
-        buttonBox = new QDialogButtonBox(ChooseUser);
-        buttonBox->setObjectName(QString::fromUtf8("buttonBox"));
-        buttonBox->setOrientation(Qt::Horizontal);
-        buttonBox->setStandardButtons(QDialogButtonBox::Cancel|QDialogButtonBox::Ok);
+        horizontalLayout_3 = new QHBoxLayout();
+        horizontalLayout_3->setObjectName(QString::fromUtf8("horizontalLayout_3"));
+        pushButton_2 = new QPushButton(ChooseUser);
+        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
 
-        verticalLayout->addWidget(buttonBox);
+        horizontalLayout_3->addWidget(pushButton_2);
 
+        pushButton_3 = new QPushButton(ChooseUser);
+        pushButton_3->setObjectName(QString::fromUtf8("pushButton_3"));
+
+        horizontalLayout_3->addWidget(pushButton_3);
+
+
+        verticalLayout->addLayout(horizontalLayout_3);
+
+        QWidget::setTabOrder(lineEdit, lineEdit_2);
+        QWidget::setTabOrder(lineEdit_2, pushButton_3);
+        QWidget::setTabOrder(pushButton_3, pushButton);
+        QWidget::setTabOrder(pushButton, pushButton_2);
 
         retranslateUi(ChooseUser);
-        QObject::connect(buttonBox, SIGNAL(accepted()), ChooseUser, SLOT(accept()));
-        QObject::connect(buttonBox, SIGNAL(rejected()), ChooseUser, SLOT(reject()));
 
         QMetaObject::connectSlotsByName(ChooseUser);
     } // setupUi
@@ -166,6 +176,8 @@ public:
         label->setText(QApplication::translate("ChooseUser", "User", 0, QApplication::UnicodeUTF8));
         label_2->setText(QApplication::translate("ChooseUser", "Password", 0, QApplication::UnicodeUTF8));
         pushButton->setText(QApplication::translate("ChooseUser", "New &User", 0, QApplication::UnicodeUTF8));
+        pushButton_2->setText(QApplication::translate("ChooseUser", "&Cancel", 0, QApplication::UnicodeUTF8));
+        pushButton_3->setText(QApplication::translate("ChooseUser", "&Ok", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };
