@@ -17,15 +17,18 @@ SOURCES += main.cpp \
     newuser.cpp \
     chooseuser.cpp \
     lobby.cpp \
-    managerthread.cpp
+    managerthread.cpp \
+    chat.cpp
 
 HEADERS += \
     newuser.h \
     chooseuser.h \
     lobby.h \
-    managerthread.h
+    managerthread.h \
+    chat.h
 
 FORMS += \
     newuser.ui \
     chooseuser.ui \
-    lobby.ui
+    lobby.ui \
+    chat.ui

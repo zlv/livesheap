@@ -25,19 +25,26 @@ class MainPage(webapp2.RequestHandler):
         hash = hashlib.md5()
         hash.update(user.password)
         if type=='login' :
-            if users.count()==1 :
+            if users.count()==1 and (users[0].username!=user.username or users[0].password!=user.password) :
                 if users[0].password==hash.hexdigest() :
                     self.response.write('200 %s' % user.username) #существует / exists
                     self.userList.append(user.info())
                     self.userDict[user.username] = len(self.userList)
                 else :
-                    self.response.write('400 1 %s' % user.username) #неверный пароль / wrong password
+                    if users[0].username==user.username and users[0].password!=user.password :
+                        self.response.write('400 2 %s' % user.username) #уже на сервере / already on server
+                    else :
+                        self.response.write('400 1 %s' % user.username) #неверный пароль / wrong password
             else :
                 self.response.write('400 0 %s' % user.username) #не существует / not exists
         elif type=='greetings' :
-            self.response.write('200 %(a)d %(b)d' % {'a' : self.userDict[user.username],'b' : len(self.userList)}) #существует / exists
-            for user in self.userList :
-                self.response.write(' %s $ 0' % user.username)
+            length = 0
+            usersString = ""
+            for curuser in self.userList :
+                if curuser.username!=user.username or curuser.ip!=user.ip :
+                    usersString += ' %s $ 0' % curuser.username
+                    length += 1
+            self.response.write('200 %(a)d %(b)d %(c)s' % {'a' : self.userDict[user.username],'b' : length,'c' : usersString}) #существует / exists
         elif type=='bye' :
             id = int(self.request.get('id'))
             user = self.userList[id-1]

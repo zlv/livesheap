@@ -62,6 +62,8 @@ void ChooseUser::reaction(const QString& s)
        if (list[0]=="400")
            if (list[1]=="0")
                QMessageBox::about(this,tr("Error"),tr("Account %1 doesn't exists").arg(list[2]));
+           else if (list[1]=="2")
+               QMessageBox::about(this,tr("Error"),tr("You are already there with nick %1").arg(list[2]));
            else
                QMessageBox::about(this,tr("Error"),tr("Wrong password"));
        else

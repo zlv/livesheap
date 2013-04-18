@@ -8,12 +8,14 @@
 #include <QCloseEvent>
 
 namespace livesheap{
-Lobby::Lobby(QWidget *parent) : QDialog(parent), ui(new Ui::Lobby), bLoggedIn_(0), serverUrl("http://localhost:8080"), exitTimerCount_(0)
+Lobby::Lobby(QWidget *parent) : QDialog(parent), ui(new Ui::Lobby), bLoggedIn_(0), serverUrl(/*"http://livesheap.appspot.com/"*/"http://localhost:8080"), exitTimerCount_(0)
 {
     ui->setupUi(this);
 
     //ищем сервер в файле
     QFile file("server.cfg");
+    char c;
+    file.getChar(&c);
     if (file.canReadLine())
         serverUrl = QUrl(file.readLine());
 
