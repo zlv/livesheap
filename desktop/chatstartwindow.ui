@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>ChooseUser</class>
- <widget class="QDialog" name="ChooseUser">
+ <class>ChatStartWindow</class>
+ <widget class="QDialog" name="ChatStartWindow">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>400</width>
-    <height>300</height>
+    <width>318</width>
+    <height>75</height>
    </rect>
   </property>
   <property name="palette">
@@ -44,35 +44,35 @@
       <brush brushstyle="SolidPattern">
        <color alpha="255">
         <red>91</red>
-        <green>38</green>
-        <blue>36</blue>
+        <green>91</green>
+        <blue>91</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="Text">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>220</red>
-        <green>220</green>
-        <blue>220</blue>
+        <red>191</red>
+        <green>191</green>
+        <blue>191</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="BrightText">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>152</red>
+        <green>152</green>
+        <blue>152</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="ButtonText">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>199</red>
-        <green>199</green>
-        <blue>199</blue>
+        <red>49</red>
+        <green>55</green>
+        <blue>57</blue>
        </color>
       </brush>
      </colorrole>
@@ -199,35 +199,35 @@
       <brush brushstyle="SolidPattern">
        <color alpha="255">
         <red>91</red>
-        <green>38</green>
-        <blue>36</blue>
+        <green>91</green>
+        <blue>91</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="Text">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>220</red>
-        <green>220</green>
-        <blue>220</blue>
+        <red>191</red>
+        <green>191</green>
+        <blue>191</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="BrightText">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>152</red>
+        <green>152</green>
+        <blue>152</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="ButtonText">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>199</red>
-        <green>199</green>
-        <blue>199</blue>
+        <red>49</red>
+        <green>55</green>
+        <blue>57</blue>
        </color>
       </brush>
      </colorrole>
@@ -327,8 +327,8 @@
       <brush brushstyle="SolidPattern">
        <color alpha="255">
         <red>91</red>
-        <green>38</green>
-        <blue>36</blue>
+        <green>91</green>
+        <blue>91</blue>
        </color>
       </brush>
      </colorrole>
@@ -354,8 +354,8 @@
       <brush brushstyle="SolidPattern">
        <color alpha="255">
         <red>91</red>
-        <green>38</green>
-        <blue>36</blue>
+        <green>91</green>
+        <blue>91</blue>
        </color>
       </brush>
      </colorrole>
@@ -363,17 +363,17 @@
       <brush brushstyle="SolidPattern">
        <color alpha="255">
         <red>91</red>
-        <green>38</green>
-        <blue>36</blue>
+        <green>91</green>
+        <blue>91</blue>
        </color>
       </brush>
      </colorrole>
      <colorrole role="BrightText">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>255</red>
-        <green>255</green>
-        <blue>255</blue>
+        <red>152</red>
+        <green>152</green>
+        <blue>152</blue>
        </color>
       </brush>
      </colorrole>
@@ -381,8 +381,8 @@
       <brush brushstyle="SolidPattern">
        <color alpha="255">
         <red>91</red>
-        <green>38</green>
-        <blue>36</blue>
+        <green>91</green>
+        <blue>91</blue>
        </color>
       </brush>
      </colorrole>
@@ -479,88 +479,37 @@
     </disabled>
    </palette>
   </property>
-  <property name="font">
-   <font>
-    <family>Sans Serif</family>
-    <italic>true</italic>
-   </font>
-  </property>
   <property name="windowTitle">
-   <string>Please enter your name and password</string>
+   <string>Dialog</string>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QLabel" name="label">
-       <property name="text">
-        <string>User</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="lineEdit"/>
-     </item>
-    </layout>
-   </item>
-   <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_2">
-     <item>
-      <widget class="QLabel" name="label_2">
-       <property name="text">
-        <string>Password</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QLineEdit" name="lineEdit_2">
-       <property name="echoMode">
-        <enum>QLineEdit::Password</enum>
-       </property>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item>
-    <widget class="QPushButton" name="pushButton">
-     <property name="font">
-      <font>
-       <family>Serif</family>
-       <italic>true</italic>
-      </font>
-     </property>
+    <widget class="QLabel" name="label">
      <property name="text">
-      <string>New &amp;User</string>
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap resource="livesheap.qrc">:/livesheap/data/loading/0.png</pixmap>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
      </property>
     </widget>
    </item>
    <item>
-    <layout class="QHBoxLayout" name="horizontalLayout_3">
-     <item>
-      <widget class="QPushButton" name="pushButton_2">
-       <property name="text">
-        <string>&amp;Cancel</string>
-       </property>
-      </widget>
-     </item>
-     <item>
-      <widget class="QPushButton" name="pushButton_3">
-       <property name="text">
-        <string>&amp;Ok</string>
-       </property>
-      </widget>
-     </item>
-    </layout>
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Waiting for answer...</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>
- <tabstops>
-  <tabstop>lineEdit</tabstop>
-  <tabstop>lineEdit_2</tabstop>
-  <tabstop>pushButton_3</tabstop>
-  <tabstop>pushButton</tabstop>
-  <tabstop>pushButton_2</tabstop>
- </tabstops>
- <resources/>
+ <resources>
+  <include location="livesheap.qrc"/>
+ </resources>
  <connections/>
 </ui>

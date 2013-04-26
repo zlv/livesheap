@@ -37,7 +37,7 @@ void NewUser::ok()
     }
     connect(lobby_->pManagerThread, SIGNAL(finished(QNetworkReply*)), this, SLOT(reply(QNetworkReply*)));
     //отправляем / send it
-    emit postSignal(request, QString("username=%1&password=%2").arg(ui->lineEdit->text()).arg(ui->lineEdit_2->text()).toUtf8());
+    emit postSignal(request, QString("type=register&username=%1&password=%2").arg(ui->lineEdit->text()).arg(ui->lineEdit_2->text()).toUtf8());
 }
 
 void NewUser::reaction(const QString& s)

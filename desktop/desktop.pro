@@ -18,17 +18,24 @@ SOURCES += main.cpp \
     chooseuser.cpp \
     lobby.cpp \
     managerthread.cpp \
-    chat.cpp
+    chat.cpp \
+    chatstartwindow.cpp
 
 HEADERS += \
     newuser.h \
     chooseuser.h \
     lobby.h \
     managerthread.h \
-    chat.h
+    chat.h \
+    useritem.h \
+    chatstartwindow.h
 
 FORMS += \
     newuser.ui \
     chooseuser.ui \
     lobby.ui \
-    chat.ui
+    chat.ui \
+    chatstartwindow.ui
+
+RESOURCES += \
+    livesheap.qrc

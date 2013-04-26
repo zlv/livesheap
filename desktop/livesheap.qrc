@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/livesheap">
+        <file>data/loading/1.png</file>
+        <file>data/loading/2.png</file>
+        <file>data/loading/3.png</file>
+        <file>data/loading/0.png</file>
+    </qresource>
+</RCC>

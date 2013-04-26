@@ -25,6 +25,5 @@ int main(int argc, char *argv[])
     app.installTranslator(&translator);
 
     Lobby lobby;
-    lobby.show();
     return app.exec();
 }

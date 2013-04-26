@@ -52,9 +52,9 @@
      <colorrole role="Text">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>42</red>
-        <green>42</green>
-        <blue>42</blue>
+        <red>191</red>
+        <green>191</green>
+        <blue>191</blue>
        </color>
       </brush>
      </colorrole>
@@ -116,8 +116,8 @@
       <brush brushstyle="SolidPattern">
        <color alpha="255">
         <red>255</red>
-        <green>0</green>
-        <blue>4</blue>
+        <green>255</green>
+        <blue>255</blue>
        </color>
       </brush>
      </colorrole>
@@ -207,9 +207,9 @@
      <colorrole role="Text">
       <brush brushstyle="SolidPattern">
        <color alpha="255">
-        <red>42</red>
-        <green>42</green>
-        <blue>42</blue>
+        <red>191</red>
+        <green>191</green>
+        <blue>191</blue>
        </color>
       </brush>
      </colorrole>
@@ -271,8 +271,8 @@
       <brush brushstyle="SolidPattern">
        <color alpha="255">
         <red>255</red>
-        <green>0</green>
-        <blue>4</blue>
+        <green>255</green>
+        <blue>255</blue>
        </color>
       </brush>
      </colorrole>
@@ -426,8 +426,8 @@
       <brush brushstyle="SolidPattern">
        <color alpha="255">
         <red>255</red>
-        <green>0</green>
-        <blue>4</blue>
+        <green>255</green>
+        <blue>255</blue>
        </color>
       </brush>
      </colorrole>
@@ -491,7 +491,11 @@
     </widget>
    </item>
    <item>
-    <widget class="QLineEdit" name="lineEdit"/>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="text">
+      <string>Enter a message...</string>
+     </property>
+    </widget>
    </item>
    <item>
     <layout class="QHBoxLayout" name="horizontalLayout">

@@ -62,10 +62,12 @@ void ChooseUser::reaction(const QString& s)
        if (list[0]=="400")
            if (list[1]=="0")
                QMessageBox::about(this,tr("Error"),tr("Account %1 doesn't exists").arg(list[2]));
+           else if (list[1]=="1")
+               QMessageBox::about(this,tr("Error"),tr("Wrong password"));
            else if (list[1]=="2")
                QMessageBox::about(this,tr("Error"),tr("You are already there with nick %1").arg(list[2]));
            else
-               QMessageBox::about(this,tr("Error"),tr("Wrong password"));
+               QMessageBox::about(this,tr("Error"),tr("Account %1 is already on server").arg(list[2]));
        else
            QMessageBox::about(this,tr("Something went wrong"),tr("Unknown error"));
        disconnect(lobby_->pManagerThread, SIGNAL(finished(QNetworkReply*)), this, SLOT(reply(QNetworkReply*)));
